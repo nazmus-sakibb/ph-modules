@@ -4,5 +4,6 @@ console.log(numbers);
 // numbers.push(77);
 // console.log(numbers);
 
-numbers.pop();
+let element = numbers.pop();
 console.log(numbers);
+console.log(element);
