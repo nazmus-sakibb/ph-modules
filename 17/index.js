@@ -9,3 +9,8 @@ numbers[5] = 39;
 
 console.log(numbers);
 
+
+// Find index of an element
+const positionIndex = numbers.indexOf(39);
+console.log(positionIndex)
+
