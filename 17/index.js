@@ -11,6 +11,6 @@ console.log(numbers);
 
 
 // Find index of an element
-const positionIndex = numbers.indexOf(39);
+const positionIndex = numbers.indexOf(14);
 console.log(positionIndex)
 
