@@ -1,6 +1,6 @@
 let number = 1;
 
-while (number <= 20){
+while (number <= 50){
     console.log(number);
 
     number += 2;
