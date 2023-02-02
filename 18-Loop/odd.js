@@ -1,4 +1,4 @@
-let number = 2;
+let number = 1;
 
 while (number <= 20){
     console.log(number);
