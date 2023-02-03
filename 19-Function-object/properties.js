@@ -12,10 +12,18 @@
  const penCount2 = cart['pen'];
 
 
+ const propertyName = 'mouse';
+ const propertyValue = cart[propertyName];
+
+ console.log(propertyValue);
+
+
  const properties = Object.keys(cart);
 
  const propertyValues = Object.values(cart);
 
- console.log(properties);
+//  console.log(properties);
 
- console.log(propertyValues);
+//  console.log(propertyValues);
+
+
