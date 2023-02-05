@@ -1,9 +1,16 @@
 function isEven(number){
-    if(number % 2 === 0){
-        console.log('number is even', number);
+    const remainder = number % 2;
+    if(remainder % 2 === 0){
+        return `${number} is even number`;
+        // return true;
     } else {
-        console.log('number is odd', number);
+        return `${number} is odd number`;
+        // return false;
     }
 }
 
-isEven(303);
+
+const checkNumber = isEven(43);
+console.log(checkNumber);
+
+// isEven(142);
