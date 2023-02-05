@@ -1,12 +1,13 @@
-// 1 + 2 + 3 + 4 + 5+ 6 + 7
+ // 1 + 2 + 3 + 4 + 5+ 6 + 7
 
-function sumOfNumbers(number) {
-    let sum = 0;
+function factorial(number) {
+    let sum = 1;
     for (let i = 1; i <= number; i++) {
-        sum = sum + i;
-        console.log(i, sum);
+        sum = sum * i;
+        // console.log(i, sum);
     }
     return sum;
 }
 
-sumOfNumbers(9);
+const result = factorial(9);
+console.log(result);
