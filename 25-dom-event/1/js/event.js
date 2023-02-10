@@ -16,9 +16,8 @@ function makeBlue (){
 
 
 const pinkButton = document.getElementById('make-pink');
-pinkButton.addEventListener('click', makePink);
-
-
-function makePink(){
+pinkButton.addEventListener('click', function makePink(){
     document.body.style.backgroundColor = 'pink';
-}
+});
+
+
