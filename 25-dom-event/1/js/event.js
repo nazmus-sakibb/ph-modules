@@ -13,3 +13,12 @@ buttonBlue .onclick = makeBlue;
 function makeBlue (){
     document.body.style.backgroundColor = 'blue';
 }
+
+
+const pinkButton = document.getElementById('make-pink');
+pinkButton.addEventListener('click', makePink);
+
+
+function makePink(){
+    document.body.style.backgroundColor = 'pink';
+}
