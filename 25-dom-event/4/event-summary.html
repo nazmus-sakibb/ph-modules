@@ -8,13 +8,16 @@
 </head>
 <body>
     <p>Default Input text</p>
-    <input type="text" />
+    <input id="input-field" type="text" />
     <button id="btn-update">Update</button>
     
 
 
     <script>
-        
+        document.getElementById('btn-update').addEventListener('click', function(){
+            console.log('update button clicked');
+            const inputField = document.getElementById('input-field');
+        })
     </script>
 </body>
 </html>
