@@ -7,7 +7,7 @@
     <title>JS Dom Event</title>
 </head>
 <body>
-    <p>Default Input text</p>
+    <p id="dynamic-text">Default Input text</p>
     <input id="input-field" type="text" />
     <button id="btn-update">Update</button>
     
@@ -17,6 +17,7 @@
         document.getElementById('btn-update').addEventListener('click', function(){
             console.log('update button clicked');
             const inputField = document.getElementById('input-field');
+            document.getElementById('dynamic-text').innerText = inputField.value;
         })
     </script>
 </body>
