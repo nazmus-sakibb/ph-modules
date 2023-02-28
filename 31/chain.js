@@ -6,4 +6,4 @@ const users = [
     }
 ]
 
-console.log(users[0].name);
+console.log(users[0]?.name);
