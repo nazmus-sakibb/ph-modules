@@ -5,3 +5,5 @@ const users = [
         job: 'doctor',
     }
 ]
+
+console.log(users[0].name);
