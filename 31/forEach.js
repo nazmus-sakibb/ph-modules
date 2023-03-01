@@ -1,3 +1,4 @@
-const friends = ['top holand', 'tom brad', 'top hanks', 'tom cruise'];
+const friends = ['tom holand', 'tom brad', 'tom hanks', 'tom cruise'];
 
+friends.forEach(friend => console.log(friend)) ;
 friends.forEach(friend => console.log(friend)) ;
