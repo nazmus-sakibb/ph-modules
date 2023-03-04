@@ -5,7 +5,9 @@ const loadCountries = () => {
 }
 
 const displayCountries = countries => {
-
+    countries.forEach(country => {
+        console.log(country);
+    })
 }
 
 
