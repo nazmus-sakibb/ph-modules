@@ -5,8 +5,11 @@ const loadCountries = () => {
 }
 
 const displayCountries = countries => {
+    const countriesContainer = document.getElementById('countries-container');
     countries.forEach(country => {
-        console.log(country);
+        const countryDiv = document.createElement('div');
+        countryDiv.classList.add('country');
+        
     })
 }
 
