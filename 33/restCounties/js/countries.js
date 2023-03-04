@@ -9,7 +9,10 @@ const displayCountries = countries => {
     countries.forEach(country => {
         const countryDiv = document.createElement('div');
         countryDiv.classList.add('country');
-        
+        countryDiv.innerHTML= `
+            <h3>Name: </h3>
+        `;
+        countriesContainer.appendChild(countryDiv);
     })
 }
 
