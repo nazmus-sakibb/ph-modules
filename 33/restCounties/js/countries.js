@@ -10,7 +10,7 @@ const displayCountries = countries => {
         const countryDiv = document.createElement('div');
         countryDiv.classList.add('country');
         countryDiv.innerHTML= `
-            <h3>Name: </h3>
+            <h3>Name: ${country.name.common}</h3>
         `;
         countriesContainer.appendChild(countryDiv);
     })
