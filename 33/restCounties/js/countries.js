@@ -13,6 +13,7 @@ const displayCountries = countries => {
             <h3>Name: ${country.name.common}</h3>
         `;
         countriesContainer.appendChild(countryDiv);
+        countriesContainer.appendChild(countryDiv);
     })
 }
 
