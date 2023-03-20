@@ -31,7 +31,7 @@ function Users() {
 
 function UserData(props) {
   return (
-    <div>
+    <div style={{border: '2px solid red', margin: '20px'}}>
       <h3>Name: {props.user.name}</h3>
       <p>Email: {props.user.email}</p>
     </div>
