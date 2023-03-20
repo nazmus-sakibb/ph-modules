@@ -33,6 +33,7 @@ function UserData(props) {
   return (
     <div>
       <h3>Name: {props.user.name}</h3>
+      <p>Email: {props.user.email}</p>
     </div>
   )
 }
