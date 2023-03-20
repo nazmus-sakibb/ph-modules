@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect, useState } from 'react';
 
 function App() {
   return (
@@ -9,6 +10,11 @@ function App() {
 }
 
 function Users() {
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    
+  }, []) 
   return (
     <div>
       <h2>External users</h2>
