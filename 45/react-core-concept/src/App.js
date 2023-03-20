@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      
+      <Users/>
     </div>
   );
 }
@@ -11,7 +11,7 @@ function App() {
 function Users() {
   return (
     <div>
-      
+      <h2>External users</h2>
     </div>
   )
 }
