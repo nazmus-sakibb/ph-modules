@@ -49,7 +49,10 @@ const AssignmentMarks = () => {
     return (
         <div>
             <LineChart width={500} height={400} data={data}>
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Line type="monotone" dataKey="marks" stroke="#82ca9d" />
             </LineChart>
         </div>
     );

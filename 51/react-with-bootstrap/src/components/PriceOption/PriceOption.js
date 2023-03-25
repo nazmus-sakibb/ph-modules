@@ -3,7 +3,6 @@ import Feature from '../Feature/Feature';
 
 const PriceOption = ({ option }) => {
     const { features } = option;
-    console.log(features);
     return (
         <div className='bg-indigo-300 m-3 rounded-md p-3'>
             <div>
