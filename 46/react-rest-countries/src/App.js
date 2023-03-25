@@ -22,7 +22,6 @@ function LoadCountries() {
     <div>
       <h2>Rest countries</h2>
       <h4>Available countries: {countries.length}</h4>
-      <h4>Available countries: {countries.length}</h4>
     </div>
   )
 }
