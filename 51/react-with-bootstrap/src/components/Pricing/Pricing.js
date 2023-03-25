@@ -3,7 +3,7 @@ import PriceOption from '../PriceOption/PriceOption';
 
 const Pricing = () => {
     const pricingOptions = [
-        { id: 1, name: 'Free', price: 0, freatures: [
+        { id: 1, name: 'Free', price: 0, features: [
             'Awesome Feature',
             'Extra Feature',
             'Unnecessary Feature',
@@ -11,16 +11,16 @@ const Pricing = () => {
             'Necessary feature',
             'Mandatory feature'
         ] },
-        { id: 1, name: 'Medium', price: 9.99, freatures: [
-            'Awesome Feature',
+        { id: 1, name: 'Medium', price: 9.99, features: [
+            'Everything on free',
             'Extra Feature',
             'Unnecessary Feature',
             'Unused featere',
             'Necessary feature',
             'Mandatory feature'
         ] },
-        { id: 1, name: 'Premium', price: 19.99, freatures: [
-            'Awesome Feature',
+        { id: 1, name: 'Premium', price: 19.99, features: [
+            'Everything on medium',
             'Extra Feature',
             'Unnecessary Feature',
             'Unused featere',
