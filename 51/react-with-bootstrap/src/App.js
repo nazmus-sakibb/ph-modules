@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Pricing from './components/Pricing/Pricing';
+import AssignmentMarks from './components/AssignmentMarks/AssignmentMarks';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <h1 className="text-4xl font-bold">This is header</h1>
       <p>paragraph</p>
       <Pricing/>
+      <AssignmentMarks/>
     </div>
   );
 }
