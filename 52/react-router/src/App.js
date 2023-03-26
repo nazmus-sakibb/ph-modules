@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Products from './components/Products/Products';
 import Main from './layout/Main';
 import Friends from './components/Friends/Friends';
+import FriendDetails from './components/FriendDetails/FriendDetails';
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,13 @@ function App() {
           },
           element: <Friends />
         },
+        {
+          path: '/friend/:friendId',
+          loader: async ({params}) => {
+            console.log(params);
+          },
+          element: <FriendDetails/>
+        }
       ]
     },
     { path: '/about', element: <About /> },
