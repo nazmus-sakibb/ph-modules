@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Post.css';
 
 const Post = ({ post }) => {
-    const { title, body } = post;
+    const { id, title, body } = post;
     return (
         <div className='post'>
             <p>{title}</p>
             <p><small>{body}</small></p>
-            <button>Show Details</button>
+            <Link to={`/post/${id}`}>
+                <button>Show Details</button>
+            </Link>
         </div>
     );
 };

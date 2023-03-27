@@ -9,7 +9,7 @@ const Posts = () => {
         <div>
             <h3>A lot of fb posts are here</h3>
             {
-                posts.map(post => <Post post={post}/>)
+                posts.map(post => <Post key={post.id} post={post}/>)
             }
         </div>
     );
