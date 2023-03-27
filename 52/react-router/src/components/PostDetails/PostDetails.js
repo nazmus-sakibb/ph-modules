@@ -3,11 +3,14 @@ import { useLoaderData } from 'react-router-dom';
 
 const PostDetails = () => {
     const post = useLoaderData();
-    console.log(post);
+    const { id, title, body, userId } = post;
 
     return (
         <div>
-            <h2>Details about post</h2>
+            <h2>Details about post: {id}</h2>
+            <p>{title}</p>
+            <p><small>{body}</small></p>
+            <button>Get the Author</button>
         </div>
     );
 };

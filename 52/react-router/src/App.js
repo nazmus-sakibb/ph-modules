@@ -28,24 +28,24 @@ function App() {
         },
         {
           path: '/friend/:friendId',
-          loader: async ({params}) => {
+          loader: async ({ params }) => {
             return fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`)
           },
-          element: <FriendDetails/>
-        }, 
+          element: <FriendDetails />
+        },
         {
           path: '/posts',
           loader: async () => {
             return fetch('https://jsonplaceholder.typicode.com/posts')
           },
-          element: <Posts/>
+          element: <Posts />
         },
         {
           path: '/post/:postId',
-          loader: async ({params}) => {
+          loader: async ({ params }) => {
             return fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
           },
-          element: <PostDetails/>
+          element: <PostDetails />
         }
       ]
     },
