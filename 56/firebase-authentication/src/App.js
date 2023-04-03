@@ -1,13 +1,19 @@
 import './App.css';
-import { GoogleAuthProvider, getAuth } from 'firebase/auth';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from './firebase/firebase.init';
 
 const auth = getAuth(app);
 function App() {
-  const provider = GoogleAuthProvider();
+  const provider = new GoogleAuthProvider();
 
   const handleGoogleSingIn = () => {
-    console.log("google coming soon!");
+    signInWithPopup(auth, provider)
+      .then((result) => {
+
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
   return (
     <div className="App">
