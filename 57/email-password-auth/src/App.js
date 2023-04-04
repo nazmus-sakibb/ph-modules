@@ -2,6 +2,7 @@ import './App.css';
 import { getAuth } from 'firebase/auth';
 import app from './firebase/firebase.init';
 import RegisterReactBootstrap from './components/RegisterReactBootstrap';
+import RegisterBootstrap from './components/RegisterBootstrap';
 
 const auth = getAuth(app);
 
@@ -26,7 +27,6 @@ function App() {
   return (
     <div>
       <RegisterReactBootstrap/>
-
 
 
     </div>
