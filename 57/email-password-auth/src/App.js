@@ -16,7 +16,7 @@ const handleEmailBlur = e => {
   console.log(e.target.value);
 }
 
-const handlePasswordChange = e => {
+const handlePasswordBlur = e => {
   console.log(e.target.value);
 }
 
@@ -24,13 +24,16 @@ const handlePasswordChange = e => {
 function App() {
   return (
     <div className="App">
-      <form onSubmit={handleRegister}>
+      {/* <form onSubmit={handleRegister}>
         <input onBlur={handleEmailBlur} type="email" name="email" placeholder="Your Email..."/>
         <br />
-        <input onChange={handlePasswordChange} type="password" name="password" id="" placeholder="Your Password"/>
+        <input onBlur={handlePasswordBlur} type="password" name="password" id="" placeholder="Your Password"/>
         <br />
         <button type="submit">Register</button>
-      </form>
+      </form> */}
+
+
+      
     </div>
   );
 }
