@@ -9,16 +9,25 @@ const handleRegister = (e) => {
   const email = e.target.email.value;
   const password = e.target.password.value;
   console.log(email, password);
-  
 }
+
+
+const handleEmailBlur = e => {
+  console.log(e.target.value);
+}
+
+const handlePasswordChange = e => {
+  console.log(e.target.value);
+}
+
 
 function App() {
   return (
     <div className="App">
       <form onSubmit={handleRegister}>
-        <input type="email" name="email" placeholder="Your Email..."/>
+        <input onBlur={handleEmailBlur} type="email" name="email" placeholder="Your Email..."/>
         <br />
-        <input type="password" name="password" id="" placeholder="Your Password"/>
+        <input onChange={handlePasswordChange} type="password" name="password" id="" placeholder="Your Password"/>
         <br />
         <button type="submit">Register</button>
       </form>
