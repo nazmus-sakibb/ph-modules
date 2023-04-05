@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from 'firebase/auth';
 import app from '../firebase/firebase.init';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -16,9 +16,12 @@ function RegisterReactBootstrap() {
         setSuccess(false);
 
         const form = e.target;
+        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        console.log(name, email, password);
+
+        // validate password
         if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
             setPasswordError('Please provide atleast two uppercase letter');
             return;
@@ -41,6 +44,7 @@ function RegisterReactBootstrap() {
                 setSuccess(true);
                 form.reset();
                 verifyEmail(); 
+                updateUserName(name);
             })
             .catch(error => {
                 console.error('error', error);
@@ -56,15 +60,30 @@ function RegisterReactBootstrap() {
     }
 
 
+    const updateUserName = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName: name
+        })
+        .then(() => {
+            console.log("displayName updated");
+        })
+        .catch(error => console.error(error))
+    }
+
+
     return (
         <div className='w-50 mx-auto mt-5'>
             <Form onSubmit={handleRegister}>
                 <h2 className='text-primary'>Please Register !!</h2>
+                <Form.Group className="mb-3" controlId="formBasicName">
+                    <Form.Label>Your Name</Form.Label>
+                    <Form.Control type="text" name="name" placeholder="Enter name" required />
+                </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" name="email" placeholder="Enter email" required />
                 </Form.Group>
-
+                
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" required />

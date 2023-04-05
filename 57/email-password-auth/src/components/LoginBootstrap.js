@@ -7,6 +7,7 @@ const auth = getAuth(app);
 
 const LoginBootstrap = () => {
     const [success, setSuccess] = useState(false);
+    const [userEmail, setUserEmail] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,11 +29,25 @@ const LoginBootstrap = () => {
     }
 
 
+    const handleEmailBlur = (e) => {
+        const email = e.target.value;
+        setUserEmail(email);
+        console.log(email);
+    }
+
+
     const handleForgetPassword = () => {
-        sendPasswordResetEmail(auth, email)
+        if(!userEmail){
+            alert('Please enter your email first!');
+            return;
+        }
+        sendPasswordResetEmail(auth, userEmail)
             .then(() => {
-                
+                alert('Password reset email sent!');
             })
+            .catch(error => {
+                console.error(error);
+            });
     }
 
 
@@ -42,7 +57,7 @@ const LoginBootstrap = () => {
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="formGroupExampleInput" className="form-label">Example label</label>
-                    <input name='email' type="email" className="form-control" id="formGroupExampleInput" placeholder="Your Email" required/>
+                    <input onBlur={handleEmailBlur} name='email' type="email" className="form-control" id="formGroupExampleInput" placeholder="Your Email" required/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="formGroupExampleInput2" className="form-label">Another label</label>
@@ -52,7 +67,7 @@ const LoginBootstrap = () => {
             </form>
             {success && <p className='text-success'>Successfully login to the account!</p>}
             <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
-            <p>Forget Passord? <button type="button" onClick={handleForgetPassword} className="btn btn-link">Please reset</button></p>
+            <p><small>Forget Passord? <button type="button" onClick={handleForgetPassword} className="btn btn-link">Reset Passord</button></small></p>
         </div>
     );
 };
