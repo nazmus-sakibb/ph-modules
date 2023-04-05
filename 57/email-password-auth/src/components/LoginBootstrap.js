@@ -56,11 +56,11 @@ const LoginBootstrap = () => {
             <h3 className='text-success'>Please Login !!</h3>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="formGroupExampleInput" className="form-label">Example label</label>
+                    <label htmlFor="formGroupExampleInput" className="form-label">Your Email</label>
                     <input onBlur={handleEmailBlur} name='email' type="email" className="form-control" id="formGroupExampleInput" placeholder="Your Email" required/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="formGroupExampleInput2" className="form-label">Another label</label>
+                    <label htmlFor="formGroupExampleInput2" className="form-label">Your Password</label>
                     <input name='password' type="password" className="form-control" id="formGroupExampleInput2" placeholder="Your Password" required/>
                 </div>
                 <button type='submit' className='btn btn-primary'>Login</button>
